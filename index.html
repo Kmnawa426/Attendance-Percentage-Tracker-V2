@@ -10,17 +10,19 @@
     <div class="container">
         <h1>Student Percentage Tracker</h1>
 
+        <!-- Admin login button visible to everyone -->
         <div id="admin-login">
             <button id="admin-btn">Admin Login</button>
         </div>
         
-        <!-- Admin controls for adding students -->
+        <!-- Admin controls for adding students, hidden for non-admins -->
         <div id="admin-controls" class="admin-only">
             <input type="text" id="student-name-input" placeholder="Enter student name">
             <button id="add-student-btn">Add Student</button>
             <button id="logout-btn">Logout</button>
         </div>
         
+        <!-- Student list, visible to everyone -->
         <ul id="student-list">
             <!-- Student items will be added here dynamically -->
         </ul>
