@@ -48,6 +48,7 @@ function addStudentToList(name, percentage) {
         <div>
             <button class="percentage-btn admin-only" onclick="decreasePercentage('${name}')">-3</button>
             <button class="percentage-btn admin-only" onclick="increasePercentage('${name}')">+1</button>
+            <button class="remove-btn admin-only" onclick="removeStudent('${name}')">Remove</button>
         </div>
     `;
     studentList.appendChild(li);
@@ -84,4 +85,19 @@ function updateStudentUI(name) {
             el.textContent = `${students[name]}%`;
         }
     });
+}
+
+// Remove student (only in admin mode)
+function removeStudent(name) {
+    // Remove from the UI
+    const studentElements = document.querySelectorAll('li');
+    studentElements.forEach(el => {
+        if (el.querySelector('span').textContent === name) {
+            el.remove();
+        }
+    });
+
+    // Remove from localStorage
+    delete students[name];
+    updateLocalStorage();
 }
