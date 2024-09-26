@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Percentage Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Percentage Tracker</h1>
+
+        <div id="admin-login">
+            <button id="admin-btn">Admin Login</button>
+        </div>
+        
+        <div id="admin-controls" style="display: none;">
+            <input type="text" id="student-name-input" placeholder="Enter student name">
+            <button id="add-student-btn">Add Student</button>
+            <button id="logout-btn">Logout</button>
+        </div>
+        
+        <ul id="student-list">
+            <!-- Student items will be added here dynamically -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
