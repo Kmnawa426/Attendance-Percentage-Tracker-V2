@@ -1,0 +1,21 @@
+/* Same CSS as before */
+
+button.admin-only {
+    display: none;
+}
+
+.admin-mode .admin-only {
+    display: inline-block;
+}
+
+.admin-mode #admin-btn {
+    display: none;
+}
+
+.admin-mode #admin-controls {
+    display: block;
+}
+
+.admin-mode #logout-btn {
+    display: inline-block;
+}
